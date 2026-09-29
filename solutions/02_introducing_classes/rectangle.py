@@ -15,13 +15,14 @@ def find_greatest_area(rect_list):
             max_area = rect.calc_area
             biggest = rect
 
-def find_smallest_area(rect_list):
+def find_smallest_width(rect_list):
 
-    small_area = 1
-    smallest = None
+    smallest = rect_list[0].
+    smallest = smallest.width
 
-    for rect in rect_list():
-        if rect.calc_area() < small_area
+    for rect in rect_list:
+        if rect.width < smallest.width
+
 
 def find_red_rectangle():
 
