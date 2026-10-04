@@ -1,4 +1,4 @@
-from people import Person
+from Homework.people import Person
 
 
 if __name__ == "__main__":
