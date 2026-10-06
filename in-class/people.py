@@ -1,11 +1,3 @@
-from Homework.exerciseC1 import employee_id
-
-
-class Person:
-    first_name = "Joe"
-    last_name = "Bloggs"
-    age = 25
-    is_left = False
 
 
 
@@ -29,7 +21,7 @@ class Employee:
         print(f"Employee Salary ={self._salary}")
         print(f"Employee Title ={self.job_title}")
 
-    def calc_net_pay(self,):
+    def calc_net_pay(self):
         tax= self._salary * 0.42  #calculate tax by annual salary and tax percentage
         yearly_income= self._salary-tax
         monthly_income= yearly_income/12
@@ -42,10 +34,53 @@ class Employee:
 
 
     def calc_bonus(self):
-        if "manager" in job_title:
-            bonus_rate= 0.15
 
-        if "intern" in
+
+
+        if "Manager" in job_title:
+
+            bonus_rate = 0.15
+
+        elif "Intern" in job_title:
+
+            bonus_rate = 0.02
+
+        else:
+            bonus_rate= 0.06
+
+        return self._salary * bonus_rate
+
+
+    def get_highest_pay(self,id,salary):
+
+        highest_salary = 0
+        if highest_salary > self._salary:
+            highest_salary = self._salary
+
+
+
+        return
+
+
+
+
+
+
+
+
+
+
+    def get_lowest_pay(self,id, salary ):
+
+        lowest_salary = min(self._salary)
+
+
+
+        return
+
+
+
+
 
 
 
@@ -68,7 +103,7 @@ if __name__ == "__main__":
         employee_name=input("Enter Employee Name")
         employee_lname=input("Enter employee Surname")
         employee_salary=float(input("Enter Employee Salary"))
-        employee_title=input("Enter Employee title")
+        employee_title=input("Choose Employee title  |Manager| Intern| Other| ").lower()
 
 
 
