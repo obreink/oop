@@ -50,27 +50,15 @@ class Employee:
 
         return self._salary * bonus_rate
 
-
-    def get_highest_pay(self,id,salary):
+    def get_highest_pay(self, id, salary):  #
 
         highest_salary = 0
         if highest_salary > self._salary:
             highest_salary = self._salary
 
-
-
         return
 
-
-
-
-
-
-
-
-
-
-    def get_lowest_pay(self,id, salary ):
+def get_lowest_pay(self,id, salary ):
 
         lowest_salary = min(self._salary)
 
@@ -87,6 +75,13 @@ class Employee:
 
 if __name__ == "__main__":
     employees = {} #dictionary to hold all employees
+
+
+
+   def get_hi
+
+
+
 
 
     while len(employees)< 5:
