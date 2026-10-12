@@ -8,10 +8,14 @@ class Pizza:
     def __init__(self,size,toppings):
 
 
-        if size.lower() in _sizes:
+        if size.lower() in Pizza._sizes:
             self._size = size
         else:
-            self._size= "small"  #set small as default pizzza
+            self._size= "small"  #set small as default pizza
+
+        self.toppings = toppings
+
+
 
 
     def display(self):
@@ -24,8 +28,11 @@ class Pizza:
 
     def set_pizza_size(self,new_pizza_size):
         if new_pizza_size.lower() in self._size:
+
+
+
             return True
-        else:
+        else:  #if size is invalid
             return False
 
 
