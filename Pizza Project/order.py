@@ -28,8 +28,7 @@ class Pizza:
 
     def set_pizza_size(self,new_pizza_size):
         if new_pizza_size.lower() in self._size:
-
-
+            new_pizza_size = self._size
 
             return True
         else:  #if size is invalid
