@@ -1,63 +1,62 @@
-from zipfile import sizeCentralDir
 
 
 class Pizza:
 
-    #PART A
-    size = "Medium"
-    toppings = "Pineapple"
+    _sizes = ["Small","Medium","large","Large"]  #static variable to make pizza size available to all methods
 
 
+    def __init__(self,size,toppings):
 
 
-
-
-
-
-
-    def __init__(self,toppings,size= "Small"):
-
-        self.toppings = toppings
-        self._size = size
-
-     # PART B
-        if size in :
-            self.__size = size
-
+        if size.lower() in _sizes:
+            self._size = size
         else:
-            self.__size = "small"    # set small to default
+            self._size= "small"  #set small as default pizzza
+
 
     def display(self):
-        print(f"Pizza[toppings={self.toppings},size= {self.__size}]")
+        print(f"Pizza[toppings={self.toppings},size= {self._size}]")
 
     def get_pizza_size(self):
 
-        return self.__size
+        return self._size
 
 
-    def set_pizza_size(self):
-        if self.__size == "Small":
-            self.__size = size
-
-        elif self.__size == "Medium":
-            self.__size = "Medium"
-
-        elif self.__size == "Large":
-            self.__size = "Extra Large"
-
-
+    def set_pizza_size(self,new_pizza_size):
+        if new_pizza_size.lower() in self._size:
+            return True
         else:
-            return  False
+            return False
+
 
     def get_num_toppings(self):
+
 
         topping_count = 0
 
         for topping in self.toppings:
-            topping_count += 1
+            topping_count +=1
         return topping_count
 
     def add_pizza_topping(self,topping):
+
+        if topping in self.toppings:
+            return "Pizza topping has already been added "
+
+        else:
+            self.toppings.append(topping)
+
+
+
+    def remove_pizza_topping(self,matched_topping):
+        for topping in self.toppings:
+            if topping == matched_topping:
+                self.toppings.remove(topping)
+                return True
+
+            else:
+                return  False
+
 
 
 
