@@ -13,7 +13,17 @@ class Pizza:
         else:
             self._size= "small"  #set small as default pizza
 
+
         self.toppings = toppings
+    @classmethod
+    def validate_add_size(cls,new_size):
+        if new_size in cls.Pizza:
+            print("Pizza size already exits.")
+
+        else:
+            cls.Pizza.append(new_size)
+
+
 
 
 
@@ -26,9 +36,9 @@ class Pizza:
         return self._size
 
 
-    def set_pizza_size(self,new_pizza_size):
-        if new_pizza_size.lower() in self._size:
-            new_pizza_size = self._size
+    def set_pizza_size(self,new_size):
+        if new_size.lower() in self._size:
+            new_size = self._size
 
             return True
         else:  #if size is invalid
@@ -37,12 +47,8 @@ class Pizza:
 
     def get_num_toppings(self):
 
+        return len(self.toppings)
 
-        topping_count = 0
-
-        for topping in self.toppings:
-            topping_count +=1
-        return topping_count
 
     def add_pizza_topping(self,topping):
 
