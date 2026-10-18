@@ -16,10 +16,21 @@ while True:
         if nickname not in order:
             order[username]= "nickname"
         else:
+            print(f"{nickname} is already been used.Please choose another")
 
 
 
     size =input("Please enter size for that pizza")
+    toppings = []
+    while True:
+        choice= input("Enter topping you want for you pizza or Press x to finish Order")
+        if choice == "X":
+            break
+        toppings.append(choice)
+
+
+
+
 
 
 

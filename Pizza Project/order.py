@@ -3,6 +3,16 @@
 class Pizza:
 
     _sizes = ["Small","Medium","large","Large"]  #static variable to make pizza size available to all methods
+    size_price ={
+        "Small": 9.00,
+        "medium": 12.45,
+        "large": 15.44
+        "Extra large": 18.00
+    }
+    topping_price = 0.85
+
+
+
 
 
     def __init__(self,size,toppings):
@@ -69,6 +79,9 @@ class Pizza:
             else:
                 return  False
 
+
+    def cal_price(self):
+        return
 
 
 
