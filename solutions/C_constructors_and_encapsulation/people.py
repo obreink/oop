@@ -6,8 +6,51 @@ class Person:
         self.is_left = is_left
 
 
+    def __str__(self) -> str:
+        """
+        class object to return string information about Person
+
+        :return:
+        """
+        return f"{self.first_name} {self.last_name} {self.age} {self.is_left}"
+
+
+    def __repr__(self)-> str:
+
+        return f"Person[first_name={self.first_name}, last_name ={self.last_name},age={self.age},is_left={self.is_left}"
+
+    def __format__(self, format_spec):
+        """
+        return information with alternative options
+        :param format_spec:
+        :return:
+        """
+        match format_spec:
+            case "Personal Information":
+                return f"{self.first_name}%% {self.last_name} is {self.age} years old"
+
+            case "General Information":
+                return f"{self.first_name} ,{self.last_name} uses {self.is_left} hand"
+
+
+            case _:
+
+                return self.__str__()
+
+     def __eq__(self,other:object)->bool | NotImplemented:
+
+         if not isinstance(other , Person):
+             return NotImplemented
+
+
+
+
+
+
+
+
 class Employee:
-    def __init__(self, id_num, first="Ken", last="Loggins", salary=10000, title="Choreography Intern"):
+    def __init__(self, id_num, first="Ken", last="Logins", salary=10000, title="Choreography Intern"):
         self.first = first
         self.last = last
         self.id_num = id_num
@@ -37,6 +80,9 @@ class Employee:
 
         bonus = self._salary * bonus_rate
         return bonus
+
+
+
 
 
 if __name__ == "__main__":
