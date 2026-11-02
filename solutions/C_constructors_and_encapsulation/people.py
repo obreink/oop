@@ -37,10 +37,20 @@ class Person:
 
                 return self.__str__()
 
-     def __eq__(self,other:object)->bool | NotImplemented:
+    def __eq__(self,other:object)->bool | NotImplemented:
 
-         if not isinstance(other , Person):
-             return NotImplemented
+
+        if not isinstance(other , Person):
+
+            return NotImplemented
+
+        if self.first_name.lower() != other.first_name.lower() and self.last_name.lower() != other.last_name.lower():
+
+            return False
+
+        return True
+
+
 
 
 

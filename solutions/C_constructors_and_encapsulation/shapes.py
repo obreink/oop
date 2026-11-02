@@ -11,6 +11,42 @@ class Rectangle:
         return self.length * self.width
 
 
+
+
+
+    def __str__(self) -> str:
+
+        return f"{self.length}, {self.width} {self.colour}"
+
+
+
+    def __repr__(self) -> str:
+        return f"Rectangle[length ={self.length}  ,width ={self.width}, colour = {self.colour} ] "
+
+
+
+    def __format__(self, format_spec: str, /) -> str:
+
+        match format_spec:
+            case "Area":
+                return f"{self.length}  * {self.width}"
+
+
+
+            case _:
+                return self.__str__()
+
+
+    def __eq__(self, other:object -> bool:
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     rect1 = Rectangle(4.4, 2.2, "Red")
 
